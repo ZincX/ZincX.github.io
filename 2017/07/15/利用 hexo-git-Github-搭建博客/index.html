@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://zincx.github.io/2017/07/15/利用 hexo-git-Github-搭建博客/index.html">
 <meta property="og:site_name" content="ZincX">
 <meta property="og:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
-<meta property="og:updated_time" content="2017-07-15T13:54:37.000Z">
+<meta property="og:updated_time" content="2017-07-15T13:55:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacBook 上利用 hexo + git + Github 搭建博客">
 <meta name="twitter:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
@@ -474,7 +474,10 @@
 <p>很多教程都是直接在 Github 的备份文件夹 <code>你的id.github.io</code> 里安装 hexo，而我的方案是 Github 备份在 <code>你的id.github.io</code> 文件夹里，hexo 安装在 <code>你的id.github.io/ABC</code> 文件夹里，因为我发现 hexo 的新版本，在 <code>你的id.github.io</code> 文件夹里 hexo 是无法创建成功的，于是只好在 <code>你的id.github.io</code> 文件夹下再创建一个文件夹 <code>ABC</code> 用来安装。</p>
 </blockquote>
 </li>
-<li>有的教程说需要在 <code>你的id.github.io</code> 文件夹下执行语句 <code>npm install hexo</code> ，但是我发现这一步是重复操作，在 <code>你的id.github.io/ABC</code> 文件夹里执行 <code>npm install</code> 后，已经有 <code>node_modules</code> 了，所以这一步跳过了，而且事实也证明跳过了也没有任何的影响。</li>
+<li>有的教程说需要在 <code>你的id.github.io</code> 文件夹下执行语句 <code>npm install hexo</code>:<blockquote>
+<p>但是我发现这一步是重复操作，在 <code>你的id.github.io/ABC</code> 文件夹里执行 <code>npm install</code> 后，已经有 <code>node_modules</code> 了，所以这一步跳过了，而且事实也证明跳过了也没有任何的影响。</p>
+</blockquote>
+</li>
 </ul>
 
       

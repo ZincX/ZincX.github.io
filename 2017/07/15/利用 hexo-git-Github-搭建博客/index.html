@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://zincx.github.io/2017/07/15/利用 hexo-git-Github-搭建博客/index.html">
 <meta property="og:site_name" content="ZincX">
 <meta property="og:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
-<meta property="og:updated_time" content="2017-07-15T13:59:43.000Z">
+<meta property="og:updated_time" content="2017-07-15T14:02:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacBook 上利用 hexo + git + Github 搭建博客">
 <meta name="twitter:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
@@ -410,7 +410,7 @@
 </ul>
 <h3 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h3><ul>
 <li><p>打开 <code>ABC</code> 文件夹中的 <code>_config.yml</code>，修改以下的参数，其他的参数可以依个人喜好修改（这里 <code>branch</code> 用的是 <code>master</code> ，即我们会把博客生成的文件推到 <code>master</code> 分支）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">title: 填写你博客的标题</div><div class="line">subtitle: 填写你博客的副标题</div><div class="line">description: 关于你博客的描述，会展示在搜索结果里</div><div class="line">author: 博客的作者</div><div class="line">language: 填写语种代码，默认的中文代码是zh-CN，使用其他主题的话，需要参考主题 language 文件夹里的中文文件名称</div><div class="line">timezone: 时区，东八区用 Asia/Shanghai</div><div class="line"></div><div class="line">url: http://你的id.github.io </div><div class="line"></div><div class="line">deploy:</div><div class="line"> type: git</div><div class="line"> repo: https://github.com/你的id/你的id.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">title: 填写你博客的标题</div><div class="line">subtitle: 填写你博客的副标题</div><div class="line">description: 关于你博客的描述，会展示在搜索结果里</div><div class="line">author: 博客的作者</div><div class="line">language: 中文代码是zh-CN（有的主题的中文代码可能不一样，需要看说明）</div><div class="line">timezone: 时区，东八区用 Asia/Shanghai</div><div class="line"></div><div class="line">url: http://你的id.github.io </div><div class="line"></div><div class="line">deploy:</div><div class="line"> type: git</div><div class="line"> repo: https://github.com/你的id/你的id.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
 </li>
 <li><p>在终端用以下指令切换到 <code>你的id.github.io</code> 文件夹</p>
 <blockquote>

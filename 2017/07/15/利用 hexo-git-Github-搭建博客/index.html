@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://zincx.github.io/2017/07/15/利用 hexo-git-Github-搭建博客/index.html">
 <meta property="og:site_name" content="ZincX">
 <meta property="og:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
-<meta property="og:updated_time" content="2017-07-15T13:55:54.000Z">
+<meta property="og:updated_time" content="2017-07-15T13:59:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacBook 上利用 hexo + git + Github 搭建博客">
 <meta name="twitter:description" content="写在前面一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方">
@@ -177,7 +177,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">随笔</p>
+        <p class="site-subtitle">都是瞎写的</p>
       
   </div>
 
@@ -352,8 +352,8 @@
 
       
         <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>一直想为自己搭建一个博客，然而现有的平台都不尽人意，新浪博客太low，Lofter已经开始走贴图路线，CSDN界面太丑不忍直视，或者自己买域名和服务器搭建？然而感觉 WordPress 的信息还是太重了。于是发现了用 hexo + git + Github 来搭建博客的方法。<br>这个方法便利、省钱、然而网上教程的质量参差不齐、而且随着 hexo 版本升级，很多操作已经不适用；另一方面，这样的方法搭建起来的博客，更新起来虽然方便，但如果更换电脑的话，更新起来就困难了，这里也介绍利用创建 Github 两个分支的方法，实现在更换电脑后，也能轻松地发表新的博文。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="1-创建的思路"><a href="#1-创建的思路" class="headerlink" title="1.创建的思路"></a>1.创建的思路</h3><p>hexo 创建博客的原理，简单来说就是 hexo 将本地的网页源文件进行加工合成，再将生成的网页文件发送到 Github 上,然后生成 Github Page，而如果在 Github 上创建 master 和 Hexo 两个分支，Hexo 分支用来保存网页的源文件， master 分支保存推送的网页，即可实现在更换电脑后，也能轻松地发表新的博文。</p>
-<h3 id="2-创建-Github-repository"><a href="#2-创建-Github-repository" class="headerlink" title="2.创建 Github repository"></a>2.创建 Github repository</h3><ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="创建的思路"><a href="#创建的思路" class="headerlink" title="创建的思路"></a>创建的思路</h3><p>hexo 创建博客的原理，简单来说就是 hexo 将本地的网页源文件进行加工合成，再将生成的网页文件发送到 Github 上,然后生成 Github Page，而如果在 Github 上创建 master 和 Hexo 两个分支，Hexo 分支用来保存网页的源文件， master 分支保存推送的网页，即可实现在更换电脑后，也能轻松地发表新的博文。</p>
+<h3 id="创建-Github-repository"><a href="#创建-Github-repository" class="headerlink" title="创建 Github repository"></a>创建 Github repository</h3><ul>
 <li>创建 Github 账号。<blockquote>
 <p>注：将来创建好的博客的地址是 <code>自己的id.github.io</code>，所以这一步要选个好 id（当然到了后面 id 也是可以改的）。</p>
 </blockquote>
@@ -363,7 +363,7 @@
 <li>接下来打开的页面，选择第一项添加 README.md，这是将来为项目添加说明的，此项目相关的内容都可以记在这里。</li>
 <li>点击 repository 的 branch，创建 <code>Hexo</code> 分支，并在 setting 里将该分支设为默认分支。</li>
 </ul>
-<h3 id="3-为-Github-添加密钥"><a href="#3-为-Github-添加密钥" class="headerlink" title="3.为 Github 添加密钥"></a>3.为 Github 添加密钥</h3><ul>
+<h3 id="为-Github-添加密钥"><a href="#为-Github-添加密钥" class="headerlink" title="为 Github 添加密钥"></a>为 Github 添加密钥</h3><ul>
 <li>MacBook上有个 app 叫的「终端」，打开之后输入下面这段，双引号中改成自己注册 Github 时的邮件地址。<blockquote>
 <p>$ ssh-keygen -t rsa -C “e-mail address”</p>
 </blockquote>
@@ -376,14 +376,14 @@
 <li>用记事本打开 id_rsa.pub，复制文件内所有的内容。</li>
 <li>打开 <a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a> ，在页面的 Title 随便起个标题，下面 key 的输入框里输入刚刚复制的所有内容，然后点击 <code>Add SHH key</code>.</li>
 </ul>
-<h3 id="4-安装-node-js-和-git"><a href="#4-安装-node-js-和-git" class="headerlink" title="4.安装 node.js 和 git"></a>4.安装 node.js 和 git</h3><ul>
+<h3 id="安装-node-js-和-git"><a href="#安装-node-js-和-git" class="headerlink" title="安装 node.js 和 git"></a>安装 node.js 和 git</h3><ul>
 <li>node.js 官网 <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a> ，通用版和最新版随便挑一个下载，之后一路安装即可。</li>
 <li>git 官网 <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a> ，一般 MacBook 上是有默认安装的，可以在终端用下面指令确认一下,没有的话再下载安装：<blockquote>
 <p>$ git –version</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="5-安装-hexo"><a href="#5-安装-hexo" class="headerlink" title="5.安装 hexo"></a>5.安装 hexo</h3><ul>
+<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><ul>
 <li>选好自己想安装博客的文件位置，比如我，想安装在 <code>/Documents/Github/Blog/</code> 文件夹中（接下来的链接地址都是以我自己的例子来说明，请自行代入）。在终端切换到该文件夹的位置：<blockquote>
 <p>$ cd ~/Documents/Github/Blog</p>
 </blockquote>
@@ -408,7 +408,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6.部署博客"></a>6.部署博客</h3><ul>
+<h3 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h3><ul>
 <li><p>打开 <code>ABC</code> 文件夹中的 <code>_config.yml</code>，修改以下的参数，其他的参数可以依个人喜好修改（这里 <code>branch</code> 用的是 <code>master</code> ，即我们会把博客生成的文件推到 <code>master</code> 分支）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">title: 填写你博客的标题</div><div class="line">subtitle: 填写你博客的副标题</div><div class="line">description: 关于你博客的描述，会展示在搜索结果里</div><div class="line">author: 博客的作者</div><div class="line">language: 填写语种代码，默认的中文代码是zh-CN，使用其他主题的话，需要参考主题 language 文件夹里的中文文件名称</div><div class="line">timezone: 时区，东八区用 Asia/Shanghai</div><div class="line"></div><div class="line">url: http://你的id.github.io </div><div class="line"></div><div class="line">deploy:</div><div class="line"> type: git</div><div class="line"> repo: https://github.com/你的id/你的id.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
 </li>
@@ -431,7 +431,7 @@
 </li>
 <li>这样一来，博客就全部部署完毕了，浏览器中打开 <a href="http://你的id.github.io" target="_blank" rel="external">http://你的id.github.io</a> 就可以看到自己的博客了。</li>
 </ul>
-<h3 id="7-发表博文"><a href="#7-发表博文" class="headerlink" title="7.发表博文"></a>7.发表博文</h3><ul>
+<h3 id="发表博文"><a href="#发表博文" class="headerlink" title="发表博文"></a>发表博文</h3><ul>
 <li>想添加博文，可以直接到 <code>ABC/source/_posts</code>文件夹中添加 Markdown 文件（文件的前几行需要复制 <code>hello-world.md</code> 里的文本），也可以先用终端切换到 <code>ABC</code> 文件夹下，再通过以下指令创建文章：<blockquote>
 <p>$ hexo new “文章的标题”</p>
 </blockquote>
@@ -450,7 +450,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="8-更换电脑"><a href="#8-更换电脑" class="headerlink" title="8.更换电脑"></a>8.更换电脑</h3><ul>
+<h3 id="更换电脑"><a href="#更换电脑" class="headerlink" title="更换电脑"></a>更换电脑</h3><ul>
 <li>如果更换了电脑或者重装了电脑系统，需要把上面提到的安装的步骤全部再走一遍，然后使用以下语句进入之前的 <code>Blog</code> 文件夹：<blockquote>
 <p>$ cd ~/Documents/Github/Blog</p>
 </blockquote>
@@ -469,7 +469,7 @@
 </li>
 <li>这样一来，环境就布置好了，就可以再次写博客了。</li>
 </ul>
-<h3 id="9-有关其他"><a href="#9-有关其他" class="headerlink" title="9.有关其他"></a>9.有关其他</h3><ul>
+<h3 id="有关其他"><a href="#有关其他" class="headerlink" title="有关其他"></a>有关其他</h3><ul>
 <li>关于一直在 <code>你的id.github.io</code> 和 <code>你的id.github.io/ABC</code> 之间的来回切换：<blockquote>
 <p>很多教程都是直接在 Github 的备份文件夹 <code>你的id.github.io</code> 里安装 hexo，而我的方案是 Github 备份在 <code>你的id.github.io</code> 文件夹里，hexo 安装在 <code>你的id.github.io/ABC</code> 文件夹里，因为我发现 hexo 的新版本，在 <code>你的id.github.io</code> 文件夹里 hexo 是无法创建成功的，于是只好在 <code>你的id.github.io</code> 文件夹下再创建一个文件夹 <code>ABC</code> 用来安装。</p>
 </blockquote>
@@ -588,7 +588,7 @@
                alt="ZincX" />
           <p class="site-author-name" itemprop="name">ZincX</p>
            
-              <p class="site-description motion-element" itemprop="description">Notes of learning.</p>
+              <p class="site-description motion-element" itemprop="description">瞎写一堆。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -644,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建的思路"><span class="nav-number">2.1.</span> <span class="nav-text">1.创建的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建-Github-repository"><span class="nav-number">2.2.</span> <span class="nav-text">2.创建 Github repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-为-Github-添加密钥"><span class="nav-number">2.3.</span> <span class="nav-text">3.为 Github 添加密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装-node-js-和-git"><span class="nav-number">2.4.</span> <span class="nav-text">4.安装 node.js 和 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-安装-hexo"><span class="nav-number">2.5.</span> <span class="nav-text">5.安装 hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-部署博客"><span class="nav-number">2.6.</span> <span class="nav-text">6.部署博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-发表博文"><span class="nav-number">2.7.</span> <span class="nav-text">7.发表博文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-更换电脑"><span class="nav-number">2.8.</span> <span class="nav-text">8.更换电脑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-有关其他"><span class="nav-number">2.9.</span> <span class="nav-text">9.有关其他</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建的思路"><span class="nav-number">2.1.</span> <span class="nav-text">创建的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Github-repository"><span class="nav-number">2.2.</span> <span class="nav-text">创建 Github repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为-Github-添加密钥"><span class="nav-number">2.3.</span> <span class="nav-text">为 Github 添加密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-node-js-和-git"><span class="nav-number">2.4.</span> <span class="nav-text">安装 node.js 和 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-hexo"><span class="nav-number">2.5.</span> <span class="nav-text">安装 hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署博客"><span class="nav-number">2.6.</span> <span class="nav-text">部署博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表博文"><span class="nav-number">2.7.</span> <span class="nav-text">发表博文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换电脑"><span class="nav-number">2.8.</span> <span class="nav-text">更换电脑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有关其他"><span class="nav-number">2.9.</span> <span class="nav-text">有关其他</span></a></li></ol></li></ol></div>
             
 
           </div>
